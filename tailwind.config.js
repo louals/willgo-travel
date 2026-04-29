@@ -7,17 +7,28 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink:  { 900:"#0E2330", 800:"#132B39", 700:"#1A3646", 100:"#E4EBEF" },
-        moss: { 500:"#3F6F54", 400:"#55936F", 300:"#7AB791" },
-        cream:{ 50:"#F7F1E6", 100:"#EFE7D6" },
+        primary: "#0D1B3E", // Deep Navy for backgrounds
+        secondary: "#FFC107", // The vibrant Golden Yellow from the logo
+        accent: "#F5F0E8", // Ivory
+        "logo-navy": "#1B2A6B", // Exact Navy from logo
+        "logo-yellow": "#FFC107", // Exact Yellow from logo
+        surface: "#121C38", // Lighter Navy for cards
+        ivory: "#F5F0E8",
       },
-      borderRadius: { brand:"1.25rem" },
-      boxShadow: {
-        soft:"0 10px 30px -10px rgba(0,0,0,.1)",
+      fontFamily: {
+        serif: ["Playfair Display", "serif"],
+        sans: ["DM Sans", "sans-serif"],
+        accent: ["Cormorant Garamond", "serif"],
       },
-      backgroundImage: {
-        "brand-radial":"radial-gradient(900px 420px at 70% 10%, rgba(122,183,145,.15), transparent)",
+      animation: {
+        'scroll-down': 'scroll-down 2s ease-in-out infinite',
       },
+      keyframes: {
+        'scroll-down': {
+          '0%, 100%': { transform: 'translateY(0)', opacity: 0.5 },
+          '50%': { transform: 'translateY(10px)', opacity: 1 },
+        }
+      }
     },
   },
   plugins: [],

@@ -1,3 +1,62 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+@layer base {
+  body {
+    @apply bg-primary text-ivory;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .btn-gold {
+    @apply px-8 py-3 bg-secondary text-primary font-bold transition-all duration-300 hover:brightness-110 hover:scale-105 active:scale-95;
+  }
+
+  .btn-outline-gold {
+    @apply px-8 py-3 border-2 border-secondary text-secondary font-bold transition-all duration-300 hover:bg-secondary hover:text-primary active:scale-95;
+  }
+
+  .glass-card {
+    @apply bg-surface/40 backdrop-blur-md border border-secondary/10 p-6 rounded-lg;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-6xl font-serif text-ivory mb-8;
+  }
+
+  .accent-label {
+    @apply font-accent italic text-secondary text-xl mb-4 block;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-primary;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-secondary/30 rounded-full hover:bg-secondary/50 transition-colors;
+}
+
+/* Hide scrollbar for horizontal scroll sections but keep functionality */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
